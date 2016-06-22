@@ -3,8 +3,7 @@ const Memcached = require('memcached');
 const router = express.Router();
 const _ = require('lodash');
 
-let memcached = new Memcached('127.0.0.1:11211');
-// const memcached = new Memcached(process.env.MEMCACHED_HOST);
+let memcached = new Memcached(process.env.MEMCACHED_HOST);
 let title = process.env.PAGE_TITLE || 'Welcome to this homepage';
 
 const MC_COUNTER = 'counter';
